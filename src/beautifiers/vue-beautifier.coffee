@@ -34,13 +34,13 @@ module.exports = class VueBeautifier extends Beautifier
                   source: text
                   lang: "scss"
                   mode: "beautify"
-                match.replace(text, prettydiff(options)[0])
+                match.replace(text, prettydiff(options))
               when "less"
                 options = _.merge options,
                 source: text
                 lang: "less"
                 mode: "beautify"
-                match.replace(text, prettydiff(options)[0])
+                match.replace(text, prettydiff(options))
               when undefined
                 match.replace(text, "\n" + require("js-beautify").css(text, options) + "\n")
               else
