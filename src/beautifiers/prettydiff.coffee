@@ -124,7 +124,7 @@ module.exports = class PrettyDiff extends Beautifier
       # Beautify
       @verbose('prettydiff', options)
       output = prettydiff(options)
-      result = output[0]
+      result = output
 
       # Return beautified text
       resolve(result)
